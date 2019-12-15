@@ -1,0 +1,64 @@
+.row {
+  clear: both;    
+}
+.cell {
+  float: left;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+}
+.food {
+  background-image: url("img/mushroom.jpg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+.mario-location {
+  background-image: url("img/MarioSMBW.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+.appContainer, .spacer, .input, .output{
+    opacity: 1;
+    transition: opacity 300ms ease;
+}
+.hidden{
+    opacity: 0;
+}
+.completed-screen{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+.completed-screen.showing{
+    opacity: 1;
+    pointer-events: all;
+}
+.completed-screen button{
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.completed-screen button::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: steelblue;
+    transition: width 200ms ease;
+}
+
+.completed-screen button:hover::after{
+    width: 100%;
+}
+
