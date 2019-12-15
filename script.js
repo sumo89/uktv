@@ -203,7 +203,6 @@ $(document).ready(function() {
           $('.cell').removeClass('mario-location');
           $(marioLocationClass).addClass('mario-location');
   
-          // slight delay so the DOM can update before the alert shows
           if (collectedFood === foodCount){
               // Collected all the food, show final screen
               showCompletedScreen()
